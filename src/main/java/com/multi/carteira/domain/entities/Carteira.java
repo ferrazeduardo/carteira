@@ -9,10 +9,9 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "Carteira")
-public class Carteiras {
+public class Carteira {
     @Id
     private Long id;
-
     private BigDecimal valor;
 
     @Version
@@ -24,5 +23,14 @@ public class Carteiras {
 
     public Long getId() {
         return id;
+    }
+
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
     }
 }

@@ -22,5 +22,5 @@ public class Cliente {
 
     @OneToOne
     @JoinColumn(name = "ID_CARTEIRA")
-    private Carteiras carteira;
+    private Carteira carteira;
 }
