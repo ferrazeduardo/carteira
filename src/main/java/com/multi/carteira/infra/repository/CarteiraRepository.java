@@ -13,4 +13,9 @@ public class CarteiraRepository implements ICarteiraRepository {
     public Carteira getCarteira(Long id) {
         return null;
     }
+
+    @Override
+    public void update(Carteira carteira) {
+
+    }
 }
