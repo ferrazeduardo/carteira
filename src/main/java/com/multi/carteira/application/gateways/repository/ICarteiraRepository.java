@@ -4,5 +4,6 @@ import com.multi.carteira.domain.entities.Carteira;
 
 public interface ICarteiraRepository {
     Carteira getCarteira(Long id);
+    Carteira getCarteiraByUpdate(Long id);
     void update(Carteira carteira);
 }
