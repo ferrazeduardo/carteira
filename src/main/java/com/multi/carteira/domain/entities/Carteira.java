@@ -15,7 +15,7 @@ public class Carteira {
     private BigDecimal valor;
 
     @Version
-    private Long version;
+    private Integer version;
 
     public void setId(Long id) {
         this.id = id;
