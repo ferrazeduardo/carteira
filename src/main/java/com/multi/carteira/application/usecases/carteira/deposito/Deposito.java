@@ -6,6 +6,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+
 @Service
 @Transactional
 public class Deposito {
@@ -14,8 +16,12 @@ public class Deposito {
     private ICarteiraRepository _carteiraRepository;
 
     public void Handler(DepositoInput depositoInput){
+        if(depositoInput.valor().compareTo(BigDecimal.ZERO) <= 0)
+            throw new IllegalArgumentException("Valor deve ser maior que zero");
+
 
         Carteira carteira = _carteiraRepository.getCarteira(depositoInput.id());
+        carteira.DepositoValor(depositoInput.valor());
         _carteiraRepository.update(carteira);
 
     }
