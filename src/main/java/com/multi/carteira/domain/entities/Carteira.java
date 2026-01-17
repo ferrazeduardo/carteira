@@ -37,4 +37,9 @@ public class Carteira {
     public void DepositoValor(BigDecimal valorAdicionar){
         this.valor = valorAdicionar.add(this.valor);
     }
+
+
+    public void Saque(BigDecimal valorSacar) {
+        this.valor = this.valor.subtract(valorSacar);
+    }
 }

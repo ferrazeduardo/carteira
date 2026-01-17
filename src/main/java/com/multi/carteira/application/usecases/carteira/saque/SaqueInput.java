@@ -1,4 +1,6 @@
 package com.multi.carteira.application.usecases.carteira.saque;
 
-public class SaqueInput {
+import java.math.BigDecimal;
+
+public record SaqueInput(Long id, BigDecimal valor) {
 }
