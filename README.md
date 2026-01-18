@@ -75,10 +75,15 @@ Ao final deste projeto você terá entendido, na prática:
 
 Tema	Aprendizado
 Lock otimista	Quando usar e quando ele falha
+
 Lock pessimista	Quando é obrigatório
+
 @Version	Controle de concorrência real
+
 Deadlock	Como acontece de verdade
+
 Virtual Threads	Onde ajudam e onde não
+
 Banco de dados	Verdadeiro ponto crítico
 
 Este repositório não é sobre “funcionar”,
