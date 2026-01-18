@@ -37,38 +37,35 @@ Esse domínio é ideal porque envolve:
 - Operações críticas (transferência)  
 - Risco real de inconsistência  
 
-🧪 Experimentos Sugeridos
-Saque concorrente (lock otimista)
+## 🧪 Experimentos Sugeridos
 
-1000 saques simultâneos
+### 1. Saque concorrente (lock otimista)
+- Execute **1000 saques simultâneos** na mesma carteira  
+- Observe a ocorrência de `OptimisticLockException`  
+- Analise quantas operações realmente foram persistidas  
 
-Observe OptimisticLockException
+### 2. Retry automático
+- Capture a exceção de lock otimista  
+- Reexecute a transação automaticamente  
+- Compare o resultado com a versão sem retry  
 
-Retry automático
+### 3. Transferência concorrente
+- Implemente transferência entre duas carteiras  
+- Use **lock pessimista**  
+- Compare com uma versão **sem lock**  
+- Observe inconsistências e falhas  
 
-Capture a exceção
+### 4. Deadlock
+- Inverta a ordem dos locks nas transferências  
+- Execute cargas paralelas  
+- Observe erros de deadlock no banco de dados  
 
-Reexecute a transação
+### 5. Virtual Threads vs Thread Pool tradicional
+- Troque o executor (Virtual Threads × Fixed Thread Pool)  
+- Compare **throughput**  
+- Compare **latência**  
+- Observe onde o gargalo realmente ocorre  
 
-Transferência concorrente
-
-Use lock pessimista
-
-Compare com versão sem lock
-
-Deadlock
-
-Inverta a ordem dos locks
-
-Execute cargas paralelas
-
-Observe erro no banco
-
-Virtual Threads vs Thread Pool tradicional
-
-Troque o executor
-
-Compare throughput e latência
 ## 🎯 Objetivo Final
 
 | Tema            | Aprendizado                          |
