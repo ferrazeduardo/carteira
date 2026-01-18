@@ -69,20 +69,23 @@ Virtual Threads vs Thread Pool tradicional
 Troque o executor
 
 Compare throughput e latência
+## 🎯 Objetivo Final
 
-🎯 Objetivo Final
-Ao final deste projeto você terá entendido, na prática:
+| Tema            | Aprendizado                          |
+|-----------------|--------------------------------------|
+| Lock otimista   | Quando usar e quando ele falha       |
+| Lock pessimista | Quando é obrigatório                 |
+| @Version        | Controle de concorrência real        |
+| Deadlock        | Como acontece de verdade             |
+| Virtual Threads | Onde ajudam e onde não               |
+| Banco de dados  | Verdadeiro ponto crítico             |
 
-Tema	Aprendizado
-  -Lock otimista	Quando usar e quando ele falha
-  -Lock pessimista	Quando é obrigatório
-  -@Version	Controle de concorrência real
-  -Deadlock	Como acontece de verdade
-  -Virtual Threads	Onde ajudam e onde não
-  -Banco de dados	Verdadeiro ponto crítico
+---
 
-Este repositório não é sobre “funcionar”,
-é sobre entender profundamente concorrência em sistemas reais.
+Este repositório não é sobre “funcionar”.
+
+Ele é sobre **entender profundamente concorrência em sistemas reais**.
+
 
 
 
